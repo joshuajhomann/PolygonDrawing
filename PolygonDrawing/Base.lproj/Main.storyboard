@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PolygonDrawing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCP-Lz-agN" customClass="PolygonView" customModule="PolygonDrawing" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="VUh-Im-4cn" appends="YES" id="Gch-nZ-FcY"/>
+                                    <outletCollection property="gestureRecognizers" destination="JRk-vy-4Fb" appends="YES" id="IDS-gM-h8P"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="xCP-Lz-agN" secondAttribute="bottom" id="Hhx-Ec-S4I"/>
+                            <constraint firstItem="xCP-Lz-agN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qd7-VM-uLN"/>
+                            <constraint firstItem="xCP-Lz-agN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="owl-yJ-eE1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xCP-Lz-agN" secondAttribute="trailing" id="qHp-Af-Vq8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VUh-Im-4cn" appends="YES" id="DWx-C3-Dhu"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="polygonView" destination="xCP-Lz-agN" id="DUQ-P5-0UL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VUh-Im-4cn">
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="AHj-H7-UDU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="JRk-vy-4Fb">
+                    <connections>
+                        <action selector="pan:" destination="BYZ-38-t0r" id="AD7-tD-udL"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
