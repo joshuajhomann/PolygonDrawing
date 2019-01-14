@@ -63,10 +63,5 @@ class ViewController: UIViewController {
 
 }
 
-extension CGPoint {
-    func distance(to point: CGPoint) -> CGFloat {
-        return hypot(x-point.x, y-point.y)
-    }
-}
 
 

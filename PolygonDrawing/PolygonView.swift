@@ -8,11 +8,6 @@
 
 import UIKit
 
-struct Polygon {
-    var vertices: [CGPoint] = []
-    var isClosed: Bool = false
-}
-
 @IBDesignable class PolygonView: UIView {
     @IBInspectable var gridSpacing: CGFloat = 24 {
         didSet {
@@ -30,6 +25,11 @@ struct Polygon {
         }
     }
     @IBInspectable var polygonVertextColor: UIColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1) {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    @IBInspectable var polygonFirstVertextColor: UIColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1) {
         didSet {
             setNeedsDisplay()
         }
@@ -90,7 +90,7 @@ struct Polygon {
                 height: polygonVertexRadius * 2)
             )
         }
-        context.setFillColor(UIColor.red.cgColor)
+        polygonFirstVertextColor.setFill()
         context.fillEllipse(in: CGRect(
             x: origin.x - polygonVertexRadius,
             y: origin.y - polygonVertexRadius,

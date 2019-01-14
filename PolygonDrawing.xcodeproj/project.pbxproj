@@ -14,6 +14,8 @@
 		032C5E1821EC27980036FBAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032C5E1621EC27980036FBAB /* LaunchScreen.storyboard */; };
 		032C5E2321EC27980036FBAB /* PolygonDrawingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C5E2221EC27980036FBAB /* PolygonDrawingTests.swift */; };
 		032C5E2E21EC27BB0036FBAB /* PolygonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C5E2D21EC27BB0036FBAB /* PolygonView.swift */; };
+		032C5E3021EC3C1C0036FBAB /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C5E2F21EC3C1C0036FBAB /* Polygon.swift */; };
+		032C5E3221EC3C3B0036FBAB /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C5E3121EC3C3B0036FBAB /* CGPoint+Distance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		032C5E2221EC27980036FBAB /* PolygonDrawingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonDrawingTests.swift; sourceTree = "<group>"; };
 		032C5E2421EC27980036FBAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		032C5E2D21EC27BB0036FBAB /* PolygonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonView.swift; sourceTree = "<group>"; };
+		032C5E2F21EC3C1C0036FBAB /* Polygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
+		032C5E3121EC3C3B0036FBAB /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				032C5E0D21EC27970036FBAB /* AppDelegate.swift */,
 				032C5E0F21EC27970036FBAB /* ViewController.swift */,
 				032C5E2D21EC27BB0036FBAB /* PolygonView.swift */,
+				032C5E2F21EC3C1C0036FBAB /* Polygon.swift */,
+				032C5E3121EC3C3B0036FBAB /* CGPoint+Distance.swift */,
 				032C5E1121EC27970036FBAB /* Main.storyboard */,
 				032C5E1421EC27980036FBAB /* Assets.xcassets */,
 				032C5E1621EC27980036FBAB /* LaunchScreen.storyboard */,
@@ -200,8 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				032C5E3021EC3C1C0036FBAB /* Polygon.swift in Sources */,
 				032C5E1021EC27970036FBAB /* ViewController.swift in Sources */,
 				032C5E0E21EC27970036FBAB /* AppDelegate.swift in Sources */,
+				032C5E3221EC3C3B0036FBAB /* CGPoint+Distance.swift in Sources */,
 				032C5E2E21EC27BB0036FBAB /* PolygonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
