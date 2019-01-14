@@ -9,14 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var polygonView: PolygonView!
+    @IBOutlet private var polygonView: PolygonView!
     private var polygon = Polygon()
     private var indexOfPointBeingDragged: Int?
     private let vertexRadius: CGFloat = 12
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        polygonView.polygonVertexRadius = vertexRadius
+        polygonView.vertexRadius = vertexRadius
     }
 
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
@@ -29,11 +29,12 @@ class ViewController: UIViewController {
             } else {
                 polygon.vertices.remove(at: index)
             }
-        } else {
+        } else if !polygon.isClosed {
             polygon.vertices.append(tapPoint)
         }
         polygonView.polygon = polygon
     }
+    
     @IBAction func pan(_ sender: UIPanGestureRecognizer) {
         let tapPoint = sender.location(in: polygonView)
         switch sender.state {
@@ -59,8 +60,6 @@ class ViewController: UIViewController {
             break
         }
     }
-
-
 }
 
 
