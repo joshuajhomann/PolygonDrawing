@@ -32,6 +32,9 @@ class ViewController: UIViewController {
         } else if !polygon.isClosed {
             polygon.vertices.append(tapPoint)
         }
+        if polygon.vertices.count < 3 {
+            polygon.isClosed = false
+        }
         polygonView.polygon = polygon
     }
     
