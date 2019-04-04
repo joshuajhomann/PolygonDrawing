@@ -44,14 +44,18 @@ import UIKit
               !polygon.vertices.isEmpty else {
             return
         }
-        context.setLineWidth(polygonStrokeWidth)
-        polygonColor.setStroke()
+
+        let path = polygon.path
+
+
         polygonColor.setFill()
-        context.addPath(polygon.cgPath)
         if polygon.isClosed {
-            context.fillPath()
+            path.fill()
         }
-        context.strokePath()
+
+        polygonColor.setStroke()
+        path.lineWidth = polygonStrokeWidth
+        path.stroke()
 
         vertextColor.setFill()
         let vertexCenteredRectangles = polygon.vertices.map { point in

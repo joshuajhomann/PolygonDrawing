@@ -11,15 +11,15 @@ import UIKit
 struct Polygon {
     var vertices: [CGPoint] = []
     var isClosed: Bool = false
-    var cgPath: CGPath {
-        let path = CGMutablePath()
+    var path: UIBezierPath {
+        let path = UIBezierPath()
         guard let origin = vertices.first else {
             return path
         }
         path.move(to: origin)
         vertices.dropFirst().forEach { path.addLine(to: $0) }
         if isClosed {
-            path.closeSubpath()
+            path.close()
         }
         return path
     }
